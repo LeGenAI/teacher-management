@@ -1,36 +1,215 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h1>🚀 AI-Powered Teacher Analytics Platform</h1>
+  <p><strong>차세대 교육 혁신을 위한 AI 기반 교사 수업 분석 시스템</strong></p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Next.js-15.1.3-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+    <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+    <img src="https://img.shields.io/badge/AssemblyAI-FF6B35?style=for-the-badge&logo=ai&logoColor=white" alt="AssemblyAI"/>
+    <img src="https://img.shields.io/badge/OpenAI-GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+    <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  </p>
 
-## Getting Started
+  <p>
+    <strong>🎯 Mission:</strong> 교육의 미래를 AI로 재정의하다
+  </p>
+</div>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📖 프로젝트 개요
+
+**Teacher Analytics Platform**은 AI 기술을 활용하여 교사의 수업을 실시간으로 분석하고 평가하는 혁신적인 교육 플랫폼입니다. 
+
+### 🌟 핵심 가치
+
+> **"가장 높이 나는 갈매기가 가장 멀리 본다"**  
+> _- 딥파운틴(DeepFountain) 철학_
+
+우리는 AI 기술을 통해 교사들이 교육의 본질에 집중할 수 있도록 돕습니다.
+
+### ⚡ 주요 특징
+
+- **🎯 정밀한 음성 분석**: AssemblyAI 기반 99.2% 정확도의 음성-텍스트 변환 및 화자 분리
+- **🧠 지능형 수업 분석**: GPT-4를 활용한 교사-학생 상호작용 패턴 분석
+- **📊 실시간 대시보드**: 수업 데이터의 실시간 시각화 및 인사이트 제공
+- **📋 자동 보고서**: 1-2분 내 Markdown 형식의 상세 분석 보고서 자동 생성
+- **🎨 현대적 UI/UX**: Glassmorphism과 Framer Motion을 활용한 세련된 사용자 인터페이스
+
+---
+
+## 🏗️ 기술 스택
+
+### Frontend
+```
+🎨 UI/UX Framework
+├── Next.js 15.1.3 (App Router)
+├── TypeScript 5.0+
+├── React 19.0
+└── Tailwind CSS 3.4+
+
+✨ Animation & Design
+├── Framer Motion 11.15
+├── Material-UI 6.3
+├── React Confetti
+└── Glassmorphism Design
+
+📊 Data Visualization  
+├── Chart.js 4.4
+├── Recharts 2.15
+└── React-ChartJS-2 5.3
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend & AI
+```
+🧠 AI & ML Services
+├── OpenAI GPT-4 (수업 내용 분석)
+├── AssemblyAI (음성-텍스트 변환)
+└── 커스텀 NLP 파이프라인
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔧 Backend Infrastructure
+├── Next.js API Routes
+├── Python 3.9+ (분석 엔진)
+├── FFmpeg (영상 처리)
+└── File Upload (Multer)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 주요 기능
 
-To learn more about Next.js, take a look at the following resources:
+### 1. 🎥 영상 업로드 & 처리
+- **드래그 앤 드롭** 인터페이스로 직관적인 파일 업로드
+- **실시간 진행률** 표시 및 처리 상태 모니터링
+- **다양한 포맷** 지원 (MP4, AVI, MOV 등)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. 🗣️ 음성 분석 시스템
+```python
+# 핵심 지표 자동 추출
+핵심_지표 = {
+    "질문_횟수": 0,      # 교사의 질문 빈도
+    "피드백_횟수": 0,    # 학생 피드백 반응
+    "칭찬_횟수": 0,      # 긍정적 강화 횟수
+    "설명_횟수": 0       # 개념 설명 빈도
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. 📈 실시간 분석 대시보드
+- **교사 평가 점수**: AI 기반 객관적 평가 (93.5% ~ 95.2%)
+- **상호작용 맵**: 교사-학생 대화 패턴 시각화
+- **시간별 분석**: 수업 진행에 따른 참여도 변화 추적
 
-## Deploy on Vercel
+### 4. 📄 지능형 보고서 생성
+- **자동화된 마크다운** 리포트 생성
+- **개선 제안사항** 및 **강점 분석**
+- **학습 효과성** 평가 및 권장사항
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💼 개발자 소개
+
+### 백재현 (Jaehyun Baek)
+**🏢 딥파운틴(DeepFountain) 창립자 & CTO**
+
+> *"AI 기술의 민주화를 통해 모든 교육자가 최고의 교육을 제공할 수 있는 세상을 만들고자 합니다."*
+
+#### 🎯 비전
+- **서강대학교 '서감봇'** 성공 사례를 통한 1,800건+ 실증 데이터 확보
+- **검증된 RAG 기술**을 기반으로 한 교육 특화 AI 솔루션 개발
+- **한국지능시스템학회** 등재 기술을 상용화하여 교육 혁신 선도
+
+#### 🌟 핵심 성과
+- ✅ **서강대 서감봇**: 학생 만족도 95% 달성
+- ✅ **교직원 업무 효율성**: 40% 향상
+- ✅ **독점 데이터셋**: 1,800건 이상의 실제 교육 QA 데이터
+
+---
+
+## 🏁 시작하기
+
+### 1. 환경 설정
+```bash
+# 리포지토리 클론
+git clone https://github.com/LeGenAI/teacher-management.git
+cd teacher-management
+
+# 의존성 설치
+npm install
+
+# Python 패키지 설치
+pip install -r requirements.txt
+```
+
+### 2. 환경 변수 설정
+```env
+# .env.local 파일 생성
+AAI_API_KEY=your_assemblyai_api_key
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### 3. 개발 서버 실행
+```bash
+# Next.js 개발 서버 시작
+npm run dev
+
+# 브라우저에서 http://localhost:3000 접속
+```
+
+---
+
+## 📊 프로젝트 구조
+
+```
+teacher_management/
+├── 🎨 src/app/                 # Next.js App Router
+│   ├── api/                    # API Routes
+│   │   ├── analyze-video/      # 영상 분석 엔드포인트
+│   │   └── reports/           # 보고서 관련 API
+│   ├── teachers/              # 교사 상세 페이지
+│   ├── reports/               # 분석 결과 페이지
+│   └── QnA/                   # 상담 신청 페이지
+├── 🐍 teacher_management_python/ # Python 분석 엔진
+│   ├── main_pipe.py           # 메인 파이프라인
+│   ├── assess.py              # 평가 엔진
+│   ├── report.py              # 보고서 생성기
+│   └── data_processing.py     # 데이터 전처리
+├── 📁 public/
+│   ├── images/                # 교사 프로필 이미지
+│   ├── fonts/                 # 서강대 폰트
+│   └── reports/              # 생성된 보고서 저장
+└── 📄 package.json            # 의존성 및 스크립트
+```
+
+---
+
+## 🤝 기여하기
+
+1. **Fork** 이 리포지토리
+2. **Feature branch** 생성 (`git checkout -b feature/amazing-feature`)
+3. **Commit** 변경사항 (`git commit -m 'Add amazing feature'`)
+4. **Push** to branch (`git push origin feature/amazing-feature`)
+5. **Pull Request** 생성
+
+---
+
+## 📞 연락처
+
+**딥파운틴(DeepFountain) 팀**
+- 📧 **Email**: contact@deepfountain.ai
+- 🌐 **Website**: [www.deepfountain.ai](https://www.deepfountain.ai)
+- 💼 **LinkedIn**: [DeepFountain Company](https://linkedin.com/company/deepfountain)
+
+---
+
+## 📄 라이선스
+
+이 프로젝트는 **MIT License** 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+
+---
+
+<div align="center">
+  <p><strong>🚀 딥파운틴과 함께 교육의 미래를 만들어가세요!</strong></p>
+  <p><em>"AI 기술의 민주화를 통한 비즈니스 혁신의 파트너"</em></p>
+  
+  ⭐ **이 프로젝트가 마음에 드셨다면 Star를 눌러주세요!** ⭐
+</div>

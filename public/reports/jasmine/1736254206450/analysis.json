@@ -1,0 +1,46 @@
+{
+  "scores": {},
+  "우수점": [
+    "학생 참여를 활성화: 학생들이 교사의 질문에 적극적으로 참여하고 있습니다.",
+    "지속적인 피드백:교사는 학생들의 답변에 대해 지속적으로 피드백을 제공하고 있습니다.",
+    "개인화된 접근: 학생들이 어려움을 겪고 있는 부분에 대해 집중하고 있습니다."
+  ],
+  "개선점": [
+    "개념 설명 개선: 몇몇 개념은 혼란스럽게 설명되었으며, 이는 학생들의 이해를 방해하였습니다.",
+    "체계적인 수업 진행: 수업의 흐름이 산만하지 않도록 주제를 체계적으로 다루는 것이 필요합니다.",
+    "효과적인 피드백: 학생의 답변에 대한 피드백이 더욱 구체적이고 명확해야 합니다.",
+    "학생이 개념을 잘 이해했음을 보여주는 대화: 학생이 \"10 times 3.\"라고 답할 때, 학생이 개념을 이해하고 있음을 나타냅니다.",
+    "학생이 적극적으로 참여한 순간: 학생이 문제를 해결하기 위해 직접 문제를 제시하고, 이에 대한 해결책을 제안하려고 노력했습니다.",
+    "교사의 긍정적인 피드백이 효과적이었던 순간: 교사가 \"Good job. It's 10 times 3. Right.\"라고 말할 때, 이는 학생이 정답을 맞춘 것을 인정하고 긍정적인 피드백을 제공함으로써 학생의 자신감을 높이는 데 도움이 되었습니다."
+  ],
+  "highlights": [
+    {
+      "timestamp": "12:20",
+      "teacherText": "Good.",
+      "studentText": "Oh, 10 times 1 third. Are you just gonna Change the sign?",
+      "reason": "The teacher is praising the student for understanding the concept of division by a fraction which shows that the student has understood the concept.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "12:50",
+      "teacherText": "Good job. It's 10 times 3. Right.",
+      "studentText": "10 times 3.",
+      "reason": "The teacher is providing positive reinforcement to the student which encourages the student to be engaged in the lesson.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "21:15",
+      "teacherText": "The question is what fraction of the kilt pieces will be red squares?",
+      "studentText": "So what.",
+      "reason": "학생이 여전히 대화에 참여하고 있고, 이해를 시도하고 있음을 보여줍니다. 이 상호작용은 학습에 적극적으로 참여하고 있음을 보여줍니다.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "13:40",
+      "teacherText": "You should switch.",
+      "studentText": "Like, it's 30. 30. 30 people were there.",
+      "reason": "이 상호작용은 학생이 올바른 답변을 이해하고 제공하였으며, 교사가 이를 긍정적으로 인지하였음을 보여줍니다.",
+      "type": "개념이해"
+    }
+  ]
+}

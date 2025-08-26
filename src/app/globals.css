@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #FFFFF0;
   --foreground: #171717;
 }
 
@@ -14,8 +14,23 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html, body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+  }
+}
+
+.page-container {
+  aspect-ratio: 4/3;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+}
+
+.font-sogang {
+  font-family: var(--font-sogang), system-ui, sans-serif !important;
 }

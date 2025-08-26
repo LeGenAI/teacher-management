@@ -1,0 +1,42 @@
+﻿{
+  "scores": {
+    "학생_참여도": 20,
+    "개념_설명": 15,
+    "피드백": 15,
+    "수업_체계성": 15,
+    "상호작용": 20
+  },
+  "우수점": [
+    "학생들이 적극적으로 참여함",
+    "학생들의 생각과 이해를 체크하는 물음으로 원활한 상호작용이 이루어짐",
+    "학생들의 답변을 근거로 개념을 설명하여 학생들에게 이해를 돕는 데 성공함"
+  ],
+  "개선점": [
+    "교사의 설명 필요 시 좀 더 명료하고 구조화된 방식으로 개념을 설명할 필요가 있음",
+    "일관된 피드백 제공에 주목할 필요가 있음",
+    "복잡한 개념에 대한 단계적 접근이 필요함"
+  ],
+  "highlights": [
+    {
+      "timestamp": "[대화가 발생한 시점 1]",
+      "teacherText": "\"This question is showing you dividing into thirds. Do you get it?\"",
+      "studentText": "\"Yeah. This time we're not dividing in two thirds. We're dividing it by one third. One third.\"",
+      "reason": "학생이 나눗셈 개념을 이해하는 것을 시사하는 교사의 질문에 적절하게 응답함.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[대화가 발생한 시점 2]",
+      "teacherText": "\"What is the equation for this? We're not going to write the equation, but can you please tell me the equation?\"",
+      "studentText": "\"8 divided by 3.\"",
+      "reason": "학생이 복잡한 문제에 대한 적절한 수식을 찾아내는 과정을 확인할 수 있음.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[대화가 발생한 시점 3]",
+      "teacherText": "\"10 divided by 1 third, which is. If it's divided by 1 third. How do we change this? 10?\"",
+      "studentText": "\"It's 10 over 3. No, that's 10 divided by 3. 10 times 1 third. 10 times 3.\"",
+      "reason": "학생이 나눗셈과 곱셈의 관계를 이해하고 문제에 적용하여 그 사실을 확인하였음.",
+      "type": "개념이해"
+    }
+  ]
+}

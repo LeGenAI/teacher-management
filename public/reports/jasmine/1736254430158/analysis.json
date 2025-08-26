@@ -1,0 +1,53 @@
+{
+  "scores": {},
+  "우수점": [
+    "학생과 교사 간에 지속적인 상호작용이 있었습니다. 교사는 학생의 의견을 받아들이고 이해를 돕기 위해 노력했습니다.",
+    "수업이 진행되는 동안 학생의 참여를 독려하려고 노력했습니다.",
+    "학생의 이해를 위해 다양한 접근법과 예제를 사용했습니다."
+  ],
+  "개선점": [
+    "내용이 때때로 혼동스러웠으며, 더 명확한 설명이 필요했습니다.",
+    "몇몇 부분에서는 개념 설명이 미흡하였고 이로인해 학생의 이해에 방해가 되었습니다.",
+    "일관된 수업의 흐름을 유지하는 것이 필요하였습니다.",
+    "학생이 개념을 잘 이해했음을 보여주는 대화: 학생이 \"10 times 3.\"라고 말할 때입니다. 이 말은 학생이 문제를 이해하고 올바르게 풀어나가고 있음을 보여줍니다.",
+    "학생이 적극적으로 참여한 순간: 학생이 문제 풀이를 도와 이야기를 만들려고 할 때입니다. 이것은 학생이 활동에 적극적으로 참여하고 있음을 보여줍니다.",
+    "교사의 긍정적인 피드백이 효과적이었던 순간: 교사가 \"Good job. It's 10 times 3. Right.\"라고 말했을 때입니다. 이러한 긍정적인 피드백은 학생의 자신감을 높이고 학습 의욕을 유지하는 데 도움이 됩니다."
+  ],
+  "highlights": [
+    {
+      "timestamp": "42",
+      "teacherText": "Can Michael give an example then this time.",
+      "studentText": "Michael, Michael. Michael. Michael had. Michael has 10 pizzas. He shares them with two friends and himself.",
+      "reason": "학생이 문제를 예시를 들어서 설명했다.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "78",
+      "teacherText": "Good.",
+      "studentText": "10 times 1 third.",
+      "reason": "학생이 문제의 답을 맞히고 이에 대해 교사가 긍정적인 피드백을 보냈다.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "153",
+      "teacherText": "Do you get it?",
+      "studentText": "Yeah.",
+      "reason": "학생이 수업내용을 이해하며 적극적으로 참여하고 있다.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "279",
+      "teacherText": "Okay.",
+      "studentText": "Abby drew this.",
+      "reason": "학생이 문제를 직접 해결하고 이를 설명했다.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "308",
+      "teacherText": "Okay.",
+      "studentText": "Then the question is what fraction of the kilt pieces will be red squares?",
+      "reason": "학생이 교사의 설명을 이해하고 이를 바탕으로 문제를 해결하려고 시도하고 있다.",
+      "type": "적극참여"
+    }
+  ]
+}

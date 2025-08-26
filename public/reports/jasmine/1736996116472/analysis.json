@@ -1,0 +1,35 @@
+﻿{
+  "scores": {
+    "학생_참여도": 14,
+    "개념_설명": 15,
+    "피드백": 14,
+    "수업_체계성": 13,
+    "상호작용": 16
+  },
+  "우수점": [
+    "교사가 학생들에게 계속적으로 질문을 던져 활발한 대화를 유도하였다.",
+    "개념 설명이 체계적이며 논리적으로 진행되었다.",
+    "교사와 학생 모두 생각을 전달하고 이해하도록 노력하였다."
+  ],
+  "개선점": [
+    "체계성 부분에서 학생들이 종종 혼란스러워 하는 모습이 보였다.",
+    "학생들의 이해도를 더욱 구체적으로 확인하는 과정이 필요했다.",
+    "학생들에게 조금 더 명확한 피드백을 제공할 필요가 있었다."
+  ],
+  "highlights": [
+    {
+      "timestamp": "문제해결 과정 중",
+      "teacherText": "\"How are we gonna divide them by one third? Not three.\"",
+      "studentText": "\"Yeah, Michael baked. I mean, Michael baked ten pizzas. He sliced them into eight equal parts. No, no. Three people ate one third of it.\"",
+      "reason": "학생이 수학적 개념을 이해하고 적용하려 노력하는 모습이 보였다.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "문제해결 과정 후",
+      "teacherText": "\"Good job. It's 10 times 3. Right.\"",
+      "studentText": "\"Like, it's 30. 30. 30 people were there.\"",
+      "reason": "문제 해결에 성공하였고, 학생이 자신의 생각을 명확하게 표현하였다.",
+      "type": "적극참여"
+    }
+  ]
+}
