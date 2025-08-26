@@ -195,9 +195,8 @@ teacher_management/
 ## 📞 연락처
 
 **딥파운틴(DeepFountain) 팀**
-- 📧 **Email**: contact@deepfountain.ai
-- 🌐 **Website**: [www.deepfountain.ai](https://www.deepfountain.ai)
-- 💼 **LinkedIn**: [DeepFountain Company](https://linkedin.com/company/deepfountain)
+- 📧 **Email**: bjh3641@gmail.com
+- 🌐 **Website**: [www.deepfountain.ai](https://deep-fountain.com)
 
 ---
 
