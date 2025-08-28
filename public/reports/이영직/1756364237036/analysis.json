@@ -1,0 +1,54 @@
+﻿{
+  "scores": {
+    "학생_참여도": 17,
+    "개념_설명": 19,
+    "피드백": 18,
+    "수업_체계성": 18,
+    "상호작용": 18
+  },
+  "우수점": [
+    "학생들에게 스스로 문제를 해석하고 여러 번 발언할 기회를 지속적으로 부여함 (ex: \"Can you write that down?\", \"What is the equation?\").",
+    "분수의 덧셈/곱셈/나눗셈 등 수학 개념을 여러 방식(식, 시각화, 이야기 생성 등)으로 다양하게 설명하며 학생에게 질문을 유도함.",
+    "학생 오류 시 즉각적으로 추가 질문과 설명(오답 원인 분석, 개념 재정리 등)으로 적극적 피드백을 제공함."
+  ],
+  "개선점": [
+    "일부 수업 과정에서 학생들이 스스로 문제를 이해하지 못하고 헤매는 시간이 길어 집중력이 저하되는 모습이 있었으므로, 주요 개념에 대해 중간마다 간단한 정리나 피드백 타이밍을 늘릴 필요가 있음.",
+    "학생 혼동이 반복되는 구간(예: \"add or subtract?\", \"are we interested in acres?\")에 더 명확한 예시와 정답 확인 시간을 추가하면 좋음.",
+    "화면 공유, 도구 사용(“can't see the screen”, “Share it”) 등 학습 환경 관련 이슈도 자주 언급되므로, 장비/환경 체크에 대한 사전 안내가 강화되면 참여도 상승 가능."
+  ],
+  "highlights": [
+    {
+      "timestamp": "13:24",
+      "teacherText": "\"1 fourth, 1 fourth times 1 third. Thank you, Michael. Were you listening?\"",
+      "studentText": "\"Yes. 1 fourth times 1 third. It's 1 12, 1 12th.\"",
+      "reason": "학생이 분수 곱셈의 본질을 이해하고 식으로 나타낸 후, 교사가 즉각 긍정 피드백과 집중도 확인 질문(“Were you listening?”)을 이어가는 장면. 개념이 본질적으로 전달되고 학생이 스스로 답을 구하며 학습 동기 유발이 잘 이뤄짐.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "27:43",
+      "teacherText": "\"Are we using all these three numbers?\"",
+      "studentText": "\"We need. We need.\"",
+      "reason": "학생들이 문제의 정보 중 불필요한 부분(‘acres’)을 구분하지 못할 때 교사가 반복적인 질문과 재정리로 ‘문제 읽기와 정보 분석’ 역량을 자연스럽게 길러줌. 유의미한 비판적 사고 및 문제해결 학습 기회가 제공됨.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "40:24",
+      "teacherText": "\"You just heard the word less and you just thought it's minus, right?... You have to understand the situation. Question. Do you get it? Yes. So can you please resolve this question?\"",
+      "studentText": "(침묵 후 재시도)",
+      "reason": "‘문법적 단어'에만 의존해 기계적으로 연산하지 않고 문제 맥락을 파악하게 지도. 학생이 혼란을 겪는 모습을 인내심 있게 기다리며 생각의 전환을 유도함.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "47:12",
+      "teacherText": "\"No. 0.18. This is 1800s. Is this 1800s? No. This is 1 and 8, 10, which is 1 and 8/10. Do you get it?\"",
+      "studentText": "\"Yeah.\"",
+      "reason": "학생이 소수와 분수를 혼동할 때 교사가 엉뚱한 답변의 오류를 짚으며 반복 설명하고, 정확한 표기법을 실시간으로 교정. 기초 개념 오개념을 바로잡는 좋은 피드백 사례.",
+      "type": "긍정피드백"
+    }
+  ],
+  "title": "Test_1",
+  "teacherId": "이영직",
+  "uploadDate": "2025-08-28T06:58:37.122Z",
+  "filename": "Test_1.mp4",
+  "fileSize": 121980576
+}

@@ -9,7 +9,7 @@ class TeachingDataProcessor:
         self.raw_text = raw_text
         self.llm = ChatOpenAI(
             api_key=config.OPENAI_API_KEY,
-            model="gpt-3.5-turbo",
+            model="gpt-4.1-2025-04-14",
             temperature=0
         )
         self.processed_data = {

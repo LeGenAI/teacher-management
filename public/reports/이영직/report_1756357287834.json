@@ -1,0 +1,63 @@
+{
+  "reportId": "report_1756357287834",
+  "title": "수학강의영상_평가자료",
+  "teacherId": "7221ee18-05d5-4e9b-83c9-bd1382b07505",
+  "teacherName": "이영직",
+  "filename": "수학강의영상_평가자료.mp4",
+  "fileSize": 121980576,
+  "uploadDate": "2025-08-28T05:02:42.339Z",
+  "analysis": {
+    "overall_score": 16,
+    "teacher_speaking_time": 1500,
+    "student_speaking_time": 500,
+    "interaction_count": 10,
+    "question_count": 5,
+    "positive_feedback_count": 8,
+    "categories": {
+      "engagement": {
+        "score": 16,
+        "feedback": "학생 참여도가 양호했습니다."
+      },
+      "clarity": {
+        "score": 17,
+        "feedback": "설명이 명확했습니다."
+      },
+      "interaction": {
+        "score": 15,
+        "feedback": "상호작용이 적절했습니다."
+      },
+      "time_management": {
+        "score": 16,
+        "feedback": "시간 관리가 양호했습니다."
+      }
+    },
+    "strengths": [
+      "체계적인 진행",
+      "명확한 설명"
+    ],
+    "improvements": [
+      "더 많은 상호작용 필요",
+      "학생 참여 확대"
+    ],
+    "key_moments": [
+      {
+        "timestamp": "00:02",
+        "speaker": "A",
+        "text": "안녕하세요 여러분, 오늘 수업을 시작하겠습니다.",
+        "significance": "수업 도입"
+      }
+    ]
+  },
+  "transcript": {
+    "text": "수학강의영상_평가자료 수업 대화 내용...",
+    "utterances": [
+      {
+        "speaker": "A",
+        "text": "안녕하세요 여러분, 오늘 수업을 시작하겠습니다.",
+        "start": 0,
+        "end": 3000,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

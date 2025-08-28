@@ -1,0 +1,54 @@
+﻿{
+  "scores": {
+    "학생_참여도": 19,
+    "개념_설명": 18,
+    "피드백": 17,
+    "수업_체계성": 18,
+    "상호작용": 19
+  },
+  "우수점": [
+    "학생의 답변을 적극적으로 유도하고 질문하며 발언기회를 골고루 제공함",
+    "수학적 개념(분수의 나눗셈, 시각적 모델, 단위변환 등)을 다양한 예시와 반복 질문을 통해 명확하게 설명",
+    "학생 답변의 오류나 혼란에 대해 구체적인 피드백과 추가 설명을 제공하며, 학생들이 논리적 접근을 하도록 안내함"
+  ],
+  "개선점": [
+    "학생 수 차이로 인해 장시간 한 학생에 대한 대화가 반복되어, 다른 학생들의 몰입이나 집중도 저하 가능",
+    "문제 풀이과정 설명 시 명확한 한글 용어 사용, 수학적 표기에 더 일관성이 필요(학생 일부가 영어/숫자를 혼용함)",
+    "화면 공유 및 학습자료 시각화에서 소통 오류(‘안 보인다’, ‘스크롤 해달라’ 등)가 반복되어 학습 흐름이 다소 끊김"
+  ],
+  "highlights": [
+    {
+      "timestamp": "07:40",
+      "teacherText": "\"Joe, what is the equation for this question? What is the equation?\"",
+      "studentText": "\"What is this? 10 divided by 1 third.\"",
+      "reason": "학생이 복잡한 분수 나눗셈 문제의 해법을 직접 식으로 나타내며 주도적으로 문제를 해결하는 모습. 교사는 이 과정을 자연스럽게 질문으로 유도함.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "13:23",
+      "teacherText": "\"Who knows how to do this?\"",
+      "studentText": "\"1 fourth times 1 third. Thank you, Michael. Were you listening?\"",
+      "reason": "학생이 분수의 곱셈 원리를 정확하게 답하여 다양한 문제 풀이법을 스스로 연결 지으며 참여. 교사가 즉각 긍정적 피드백을 줌.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "30:12",
+      "teacherText": "\"No. So you should add them. It's three and two fifths plus two and one twelve. Okay, Abby, you got the answer. How did you solve this? Oh, can you please explain using words?\"",
+      "studentText": "\"I cannot understand because you're not using the word end. You have to see three and two fifths.\"",
+      "reason": "학생이 혼합수의 덧셈 과정에서 언어적 설명에 어려움을 느끼자, 교사가 정확한 수학적 표현을 유도함(수학의 'end' 개념 안내).",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "40:24",
+      "teacherText": "\"You have to understand the situation. Question. Do you get it? Yes. So can you please resolve this question? Oh, Michael's solving. I can see that. What about Abby?\"",
+      "studentText": "\"Oh, wait, don't. Don't tell the answer yet. Abby solving. Right.\"",
+      "reason": "교사가 '덧셈/뺄셈' 선택에서 상황 이해의 중요성을 강조하며 학생의 논리적 사고를 촉진. 학생 역시 생각 기회를 확보함.",
+      "type": "적극참여"
+    }
+  ],
+  "title": "Test영상",
+  "teacherId": "이영직",
+  "uploadDate": "2025-08-28T07:21:08.337Z",
+  "filename": "Test_1.mp4",
+  "fileSize": 121980576
+}

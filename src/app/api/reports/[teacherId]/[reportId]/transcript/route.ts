@@ -7,7 +7,19 @@ export async function GET(
   context: { params: Promise<{ teacherId: string; reportId: string }> }
 ) {
   const params = await context.params;
-  const { teacherId, reportId } = params;
+  let { teacherId, reportId } = params;
+  
+  // URL 디코딩 처리 (이중 인코딩 대응)
+  try {
+    teacherId = decodeURIComponent(teacherId);
+    // 이중 인코딩된 경우를 대비해 한 번 더 디코딩
+    if (teacherId.includes('%')) {
+      teacherId = decodeURIComponent(teacherId);
+    }
+  } catch (error) {
+    console.error('URL 디코딩 오류:', error);
+    // 디코딩 실패 시 원본 사용
+  }
 
   try {
     const filePath = path.join(

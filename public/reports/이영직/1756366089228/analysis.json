@@ -1,0 +1,55 @@
+﻿{
+  "scores": {
+    "학생_참여도": 17,
+    "개념_설명": 18,
+    "피드백": 19,
+    "수업_체계성": 17,
+    "상호작용": 18
+  },
+  "우수점": [
+    "교사가 반복적으로 학생들에게 질문을 던지며 개념 이해와 자기 표현을 유도함(예: “Can you please tell me the equation?” 등)",
+    "학생의 오류나 혼란스러운 부분을 바로잡아주며 즉각적으로 구체적이고 긍정적인 피드백을 제공함(예: “Good job. It’s 10 times 3. Right” “Very good. That is equal to 20”)",
+    "다차원적 접근(수식, 시각화, 구체적 예시 등)으로 같은 개념을 다양한 방식으로 설명하여 학생의 이해를 도모함(예: 분수의 덧셈, 실제 상황 예시, 시각 자료 활용 등)"
+  ],
+  "개선점": [
+    "주어진 시간 내에 여러 질문과 장면 전환이 빈번하게 이루어져, 학생들이 어떤 문제를 풀고 있는지 혼란을 느끼는 구간이 있었음(예: 문제 번호 혼동, 질문 반복 등)",
+    "학생 답변에 대해 구체적 근거 또는 설명만 요청하는 경우가 많아, 학생들의 자기 설명 및 문제 해결 과정을 좀 더 체계적으로 이끌어낼 수 있음(예: \"그게 맞는 이유를 말해줘\" 같은 요청을 더 할 수 있음)",
+    "온라인 상황의 한계(화면 미공유, 소리/화면 관련 혼선 등)에서 학생 발화를 듣고 즉각적으로 교정하거나 발화 순서를 더 명확히 조정할 필요가 있음"
+  ],
+  "highlights": [
+    {
+      "timestamp": "7:40",
+      "teacherText": "“Okay, it’s 10 divided by 1 third, which is. If it’s divided by 1 third. How do we change this? 10?”",
+      "studentText": "“It’s 10 over 3.”  “10 times 1 third.”  “10 times 3.”",
+      "reason": "학생이 분수의 나눗셈 개념에서 '나누기'와 '곱셈'의 관계를 스스로 탐색하며 발화. 교사는 그 과정을 한 단계씩 따라가며 즉각적으로 인정/정정함으로써 수학적 개념 변환(deep structure)의 이해를 심화시킴.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "12:59",
+      "teacherText": "“Oh. So 1/4 of the squares, which means it’s 1. What is the equation? How do we get 1/4 of 1/3? Who knows how to do this?”",
+      "studentText": "“Not me.” “1 fourth times 1 third.”",
+      "reason": "여러 학생이 자신의 모름을 솔직히 표현하며, 다른 학생(혹은 같은 학생)이 '1/4 x 1/3'이라는 정답을 도출. 개념 혼란-해결-확신의 흐름이 자연스럽게 나타남.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "31:06",
+      "teacherText": "“Okay. Why? Michael, why do you think she made this?” “Make it more easier. What does that mean? ... But if you change them to 60 by multiplying...”",
+      "studentText": "“To make it more easier.”",
+      "reason": "학생이 분수의 분모 통일 이유를 자기 언어로 설명하고, 교사는 그 동기를 재확인하고 논리를 정리해줌. 자기 설명과 교사의 정교화 피드백이 잘 엮여 있음.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "40:18",
+      "teacherText": "“You just heard the word less and you just thought it's minus, right? ... You have to understand the situation. Question. Do you get it? Yes. So can you please resolve this question?”",
+      "studentText": "(일련의 ‘add?’ ‘minus?’ ‘more?’ ‘less?’ 등의 반응)",
+      "reason": "단어에 끌려 기계적으로 연산 규칙을 적용하는 것을 넘어, 실제 맥락을 따져 의미적 사고로 전환하도록 지도한 부분. 문제풀이 태도를 점검하고 비판적으로 사고하게 유도한 장면임.",
+      "type": "개념이해"
+    }
+  ],
+  "title": "Test_1",
+  "teacherId": "이영직",
+  "uploadDate": "2025-08-28T07:29:55.320Z",
+  "filename": "Test_1.mp4",
+  "fileSize": 121980576,
+  "videoDuration": "00:48:04.04"
+}

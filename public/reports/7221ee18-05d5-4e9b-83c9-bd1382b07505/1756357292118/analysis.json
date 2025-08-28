@@ -1,0 +1,35 @@
+﻿{
+  "scores": {
+    "학생_참여도": 17,
+    "개념_설명": 16,
+    "피드백": 16,
+    "수업_체계성": 14,
+    "상호작용": 18
+  },
+  "우수점": [
+    "학생들이 다양한 문제 풀이 과정에서 적극적으로 자신의 생각과 풀이 과정을 설명함",
+    "교사가 잘못된 접근을 보완해주고, 반복적으로 개념을 설명하며 학생 스스로 답을 도출하도록 유도함",
+    "학생이 맞힌 답에 긍정적인 피드백(“Good job”, “Well done”, “Perfect”) 및 추가 설명을 통해 자신감을 심어줌"
+  ],
+  "개선점": [
+    "대화의 체계성(순서, 정리)이 약해 종종 혼란이 발생; 질문과 설명이 중간에 끊기거나 다시 반복됨",
+    "교사의 설명이 산만하게 흐르거나 잡담(“왜 웃어?”, “Abby, 앉아봐” 등)으로 흐름이 멈추는 경우가 있음",
+    "일부 문제에서는 학생이 개념적 혼동(예: 덧셈/뺄셈 구분, 단위 관리 등)을 충분히 정리하지 못하고 넘어감"
+  ],
+  "highlights": [
+    {
+      "timestamp": "[대화 중반, 분수 개념 설명 파트]",
+      "teacherText": "“Thank you, Michael. Were you listening? Yes. 1/4 times 1 third… It’s 1/12th. Good job.”",
+      "studentText": "“1/4 times 1 third.”",
+      "reason": "학생이 직접 개념적 연산을 떠올리고, 교사가 즉각적으로 긍정적 피드백을 주며, 문제의 본질(분수의 곱)과 연결시킴",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[후반부, 헷갈리는 정보 구분 파트]",
+      "teacherText": "“Why do we have this 8? Is this important in this question that she took out eight glasses?”",
+      "studentText": "“No, no, it’s not needed. This information’s not needed.”",
+      "reason": "불필요한 정보를 스스로 걸러내는 학생들의 사고력 확인, 교사가 유도한 질문을 통해 핵심 정보를 구분하게 함",
+      "type": "적극참여"
+    }
+  ]
+}

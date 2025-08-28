@@ -78,3 +78,6 @@ tmp/
 # *.avi
 # *.mov
 # *.mkv
+
+# Uploaded files
+public/uploads/

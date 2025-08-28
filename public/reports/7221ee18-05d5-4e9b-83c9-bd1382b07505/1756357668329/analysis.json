@@ -1,0 +1,42 @@
+﻿{
+  "scores": {
+    "학생_참여도": 18,
+    "개념_설명": 16,
+    "피드백": 17,
+    "수업_체계성": 14,
+    "상호작용": 19
+  },
+  "우수점": [
+    "학생이 적극적으로 질문을 하고 답을 찾아가는 모습이 여러 번 나타남",
+    "교사가 학생의 이해를 확인하기 위해 반복적으로 질문하고, 유도 질문으로 학생의 사고를 촉진함",
+    "피드백이 긍정적이고, 학생 오개념에 대해 즉각적으로 설명 및 정정이 이루어짐"
+  ],
+  "개선점": [
+    "일부 설명이 산만하거나 반복되어 체계적으로 흐름이 잡히지 않는 부분이 있음",
+    "시간 관리가 다소 미흡하여 학생이 지치거나 집중을 잃는 구간이 있음",
+    "학생 발표 내용에 대해 구체적 피드백이나 정리 및 요약이 더 추가되면 좋음"
+  ],
+  "highlights": [
+    {
+      "timestamp": "[분할 없음, 대화 중반]",
+      "teacherText": "\"What is the equation? How do we get 1/4 of 1/3? Who knows how to do this?\"",
+      "studentText": "\"1 fourth times 1 third. Thank you, Michael. Were you listening?\"",
+      "reason": "학생이 분수의 곱셈 개념을 정확하게 제시하며 교사도 긍정적으로 확인, 수학 개념이 효과적으로 전달됨",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[분할 없음, 대화 후반]",
+      "teacherText": "\"So actually, you guys know that 1/4. I mean, 4 divided by 1/5 is 20, right? How did you know it's 20 without using multiplication? Actually, there's one way.\"",
+      "studentText": "\"Four times five.\"",
+      "reason": "학생이 나눗셈과 곱셈의 관계를 스스로 언급하며 교사는 이를 유도하여 결론을 이끌어냄",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[분할 없음, 대화 후반부]",
+      "teacherText": "\"So no is the answer. What is the unit? If no units then. Wrong.\"",
+      "studentText": "\"No, wait, wait. Pounds.\"",
+      "reason": "학생들이 단위의 필요성을 인지하고 정확한 수학적 답변을 완성.",
+      "type": "적극참여"
+    }
+  ]
+}
