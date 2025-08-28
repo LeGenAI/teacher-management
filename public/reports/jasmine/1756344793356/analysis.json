@@ -1,0 +1,35 @@
+﻿{
+  "scores": {
+    "학생_참여도": 15,
+    "개념_설명": 12,
+    "피드백": 9,
+    "수업_체계성": 13,
+    "상호작용": 16
+  },
+  "우수점": [
+    "방화의 유통성과 유체성",
+    "학생 이해 확인",
+    "개념에 대한 깊이 있는 설명과 확장성"
+  ],
+  "개선점": [
+    "대화의 유창성 및 일관성 개선",
+    "더 낮은 수준 개념에 대한 확인",
+    "조직화 및 학생 참여에 대한 준비"
+  ],
+  "highlights": [
+    {
+      "timestamp": "[50:00]",
+      "teacherText": "So did you finish week 11?",
+      "studentText": "Guys, I have day four to do. I think week 11. I'm not sure.",
+      "reason": "학생이 수업에 적극적으로 참여하고 있음을 보여줌",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "[30:00]",
+      "teacherText": "How did you do this?",
+      "studentText": "Let me see. Oh, I can't see. I can't see.",
+      "reason": "교사가 학생의 생각과 과정에 대해 명확히 이해하려고 시도하고 있음",
+      "type": "개념이해"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+﻿{
+  "scores": {
+    "학생_참여도": 17,
+    "개념_설명": 18,
+    "피드백": 16,
+    "수업_체계성": 17,
+    "상호작용": 18
+  },
+  "우수점": [
+    "학생들이 문제풀이, 개념 설명, 의문 제기 등 다양한 방식으로 수업에 적극적으로 참여함.",
+    "교사가 개념(분수의 나눗셈, 단위환산 등)을 반복적·구체적으로 설명하고, 학생 발언을 유도하며 이해를 확인함.",
+    "학생들에게 충분히 사고할 시간을 주고, 다양한 풀이 방법(식, 시각자료, 직관적 설명 등)을 안내함."
+  ],
+  "개선점": [
+    "일부 학생들이 문제를 잘못 이해하거나 소극적인 반응(예: “모르겠어요”, “이게 맞나요?”)을 보일 때 좀 더 개별적이면서도 구체적인 추가 설명이나 격려가 필요함.",
+    "수업 후반부로 갈수록 화면 공유, 집중력 저하(“화면 안 보여요”, “피곤해요” 등)가 잦으므로 템포 조절이나 짧은 휴식 등 관리방식 보완 필요.",
+    "학생의 계산 실수나 개념 혼동 상황(분수 덧셈, 단위 표현 등)에 대한 구체적인 교정 피드백 및 학생 본인 설명 기회를 좀 더 늘릴 필요가 있음."
+  ],
+  "highlights": [
+    {
+      "timestamp": "12:59",
+      "teacherText": "“오. So 1/4 of the squares, which means it's 1. What is the equation? How do we get 1/4 of 1/3? Who knows how to do this?”",
+      "studentText": "“14 times 1 third. Yes. 14 times 1 third. It's 1 12, 1 12th.”",
+      "reason": "학생 스스로 핵심 개념(분수의 곱셈→전체의 일부분 계산)을 식으로 도출하고 있으며, 교사가 적절한 질문으로 유도함으로써 개념/수학적 사고력을 촉진함.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "30:25",
+      "teacherText": "“오, can you please explain using words?”",
+      "studentText": "“Cannot get 2 and 112 plus 3 and 2 fifth equals 2 and 560 plus 3 and 24 over 60, which equals 5 and 29 over 60.”",
+      "reason": "학생이 스스로 계산과정을 말로 설명하며, 교사가 ‘설명으로 표현하기’ 연습을 유도하여 단순 계산을 넘어 언어적 표현력, 논리적 전개를 강하게 훈련시킴.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "40:24",
+      "teacherText": "“You add it first because of the word more. Right. But is that how we do? If we see more, should we add… see less. Should we subtract? You have to understand the situation. Question. Do you get it?”",
+      "studentText": "“Oh, Jasmine.” “So that means 2 fifth. 8 minus 1. 1. Yes.”",
+      "reason": "교사가 문장 해석의 논리(‘more’와 ‘less’ 의미 해석 방법)를 예시와 함께 구체적으로 지도하고, 학생들이 표면적인 단어의미가 아니라 맥락을 분석하도록 사고를 유도함.",
+      "type": "개념이해"
+    }
+  ],
+  "title": "ai-test",
+  "teacherId": "백재현",
+  "uploadDate": "2025-08-28T07:40:02.128Z",
+  "filename": "Test_1.mp4",
+  "fileSize": 121980576,
+  "videoDuration": "00:48:04.04"
+}

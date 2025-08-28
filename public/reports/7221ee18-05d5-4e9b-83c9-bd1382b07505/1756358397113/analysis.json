@@ -1,0 +1,42 @@
+﻿{
+  "scores": {
+    "학생_참여도": 19,
+    "개념_설명": 17,
+    "피드백": 18,
+    "수업_체계성": 14,
+    "상호작용": 18
+  },
+  "우수점": [
+    "학생들이 문제를 직접 읽고, 예시와 설명을 통해 주도적으로 문제를 풀어나감.",
+    "교사가 반복적이고 다양한 피드백을 적시에 제공하며, 학생의 이해를 점검하고 격려함.",
+    "학생의 오개념이나 혼동을 짚어주고 다시 설명할 기회를 자주 제공함."
+  ],
+  "개선점": [
+    "대화 전체적으로 체계적 흐름이 부족하여, 때때로 산만하고 논점에서 벗어나는 경우가 있음.",
+    "일부 수업 지시나 설명이 불명확하게 전달되어 학생들이 혼란스러워했음(덧셈, 뺄셈 구분 등).",
+    "학생의 자율적 탐구 과정에 집중하느라 개념적 정리나 보충, 단계별 안내가 다소 부족함."
+  ],
+  "highlights": [
+    {
+      "timestamp": "[문제 상황 예시 및 분수 나눗셈 개념 설명 부분]",
+      "teacherText": "\"What is the equation for this? We're not going to write the equation, but can you please tell me the equation?\"",
+      "studentText": "\"Eight divided by three. It's just eight divided by three. Which is equal to eight thirds, right?\"",
+      "reason": "학생이 자신의 수식 적용 능력을 활용하여 상황을 해석하고, 교사가 이를 확인하며 긍정적으로 피드백을 준 장면.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[분수 문제에서 오개념 수정 부분]",
+      "teacherText": "\"But is that how we do? If we see more, should we add. Should we subtract?... You have to understand the situation. Question. Do you get it?”",
+      "studentText": "(혼동 후) \"So that means 2 fifth. 8 minus 1. 1. Yes.\"",
+      "reason": "학생이 오개념을 드러내었으나, 교사가 맥락 파악을 유도하며 바르게 정정할 수 있도록 효과적으로 안내.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "[학생 자율 사고와 교사 피드백 반복]",
+      "teacherText": "\"No, because 29 is a prime number. Well done. So what is the answer 5 and 9? 16. What is the unit?\"",
+      "studentText": "\"Okay, can we simplify this?\"",
+      "reason": "학생 주도 풀이와 연산 과정이 이루어진 후, 교사가 구체적으로 근거와 단위까지 꼼꼼히 확인 및 피드백함.",
+      "type": "긍정피드백"
+    }
+  ]
+}

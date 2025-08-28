@@ -15,7 +15,7 @@ class AIBookGenerator:
     def __init__(self):
         self.llm = ChatOpenAI(
             api_key=config.OPENAI_API_KEY,
-            model="gpt-4",
+            model="gpt-4.1-2025-04-14",
             temperature=0.7
         )
         

@@ -76,7 +76,7 @@ export default function AnalyzePage() {
     try {
       const formData = new FormData();
       formData.append('video', selectedFile);
-      formData.append('teacherId', teacherId);
+      formData.append('teacherId', teacherId); // teacherId가 실제로는 선생님 이름
 
       // 분석 시작
       const response = await fetch('/api/analyze', {
@@ -99,7 +99,7 @@ export default function AnalyzePage() {
   const checkStatus = async (id: string) => {
     const interval = setInterval(async () => {
       try {
-        const response = await fetch(`/api/analyze-status?transcriptId=${id}`);
+        const response = await fetch(`/api/analyze-status?transcriptId=${id}&teacherId=${teacherId}`);
         const data = await response.json();
         
         setUploadProgress(data.progress);

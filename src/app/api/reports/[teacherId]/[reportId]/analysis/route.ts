@@ -9,7 +9,19 @@ export async function GET(
   try {
     // 파라미터를 비동기적으로 처리
     const params = await context.params;
-    const { teacherId, reportId } = params;
+    let { teacherId, reportId } = params;
+    
+    // URL 디코딩 처리 (이중 인코딩 대응)
+    try {
+      teacherId = decodeURIComponent(teacherId);
+      // 이중 인코딩된 경우를 대비해 한 번 더 디코딩
+      if (teacherId.includes('%')) {
+        teacherId = decodeURIComponent(teacherId);
+      }
+    } catch (error) {
+      console.error('URL 디코딩 오류:', error);
+      // 디코딩 실패 시 원본 사용
+    }
     
     console.log('처리할 파라미터:', { teacherId, reportId });
     

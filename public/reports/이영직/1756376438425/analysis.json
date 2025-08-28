@@ -1,0 +1,55 @@
+﻿{
+  "scores": {
+    "학생_참여도": 17,
+    "개념_설명": 18,
+    "피드백": 16,
+    "수업_체계성": 17,
+    "상호작용": 18
+  },
+  "우수점": [
+    "학생의 자발적인 발언과 질문이 활발하게 이루어지며, 교사가 이를 인내심 있게 받아줌.",
+    "교사가 수학적 개념(분수의 나눗셈, 분수의 덧셈 등)을 반복적이고 다양한 예시와 시각적 모델을 통해 설명함.",
+    "학생들이 오답을 내거나 혼란을 보일 때 즉각적으로 방향을 잡아주고, 학생의 용어 사용(단위, 계산 과정 등)까지 꼼꼼하게 피드백함."
+  ],
+  "개선점": [
+    "일부 문제 풀이 과정에서 학생들이 혼란을 보이며, 문제에서 요구하는 핵심 정보를 파악하는 데 시간이 다소 소요됨(문제 이해력 점검 활동 필요).",
+    "구체적으로 각 학생에게 역할을 분배하거나, 학생 간 토론/서로 설명하는 활동이 추가되면 상호작용이 더 심화될 수 있음.",
+    "음성채널 및 화면 공유와 같은 온라인 수업 환경에서의 기술적 문제(학생이 화면/자료를 못 보는 상황 등)에 대한 사전 안내나 신속한 해결이 필요함."
+  ],
+  "highlights": [
+    {
+      "timestamp": "7:40",
+      "teacherText": "\"Okay, it's 10 divided by 1 third, which is. If it's divided by 1 third. How do we change this? 10?\"",
+      "studentText": "\"10 over 3.\" \"10 times 1 third.\" \"10 times 3.\" \"30 people could eat the pizza. Right?\"",
+      "reason": "학생들이 분수 나눗셈의 역수 곱셈 의미와 실생활 맥락(피자/사람 수 문제)에서 적극적으로 사고하고, 교사는 학생의 잘못된 접근(10÷3 등)에도 차분히 교정 질문을 반복해 본질적 개념을 이해하게 하는 과정이 나타남.",
+      "type": "개념이해"
+    },
+    {
+      "timestamp": "12:59",
+      "teacherText": "\"Oh. So 1/4 of the squares, which means it's 1. What is the equation? How do we get 1/4 of 1/3? Who knows how to do this?\"",
+      "studentText": "\"Not me.\" \"1 fourth times 1 third.\"",
+      "reason": "학생이 직접 곱셈 원리를 유추하고, 교사는 기다림과 칭찬으로 수동적 답변을 유도하지 않고 학생의 사고를 이끌어냄.",
+      "type": "적극참여"
+    },
+    {
+      "timestamp": "30:12",
+      "teacherText": "\"No. So you should add them. It's three and two fifths plus two and one twelve. Okay, Abby, you got the answer. How did you solve this? Oh, can you please explain using words?\"",
+      "studentText": "\"I cannot understand because you're not using the word end. You have to say three and two fifths. ...\"",
+      "reason": "학생이 계산 결과를 말할 뿐 아니라, 교사가 설명 과정에서 언어적 표현의 정확성(\"and\" 사용 등)을 강조하여, 수학적 내용 이해뿐 아니라 수학적 문장 구성력까지 피드백함.",
+      "type": "긍정피드백"
+    },
+    {
+      "timestamp": "39:09",
+      "teacherText": "\"Right. And we know that this is 1 and 1 over 12 pounds more than the average. So how to put the average? Should we add them or subtract them? ... For example, Abby has three cookies. Okay. And that is three less than Jasmine's. Who has more? ...\"",
+      "studentText": "\"Oh, Jasmine.\"",
+      "reason": "교사가 현실적 예시로 학생이 혼동하기 쉬운 언어(less, more)에 대한 논리적 추론을 유도하며 개념을 구체적으로 정교화할 수 있도록 지원함.",
+      "type": "개념이해"
+    }
+  ],
+  "title": "미적분",
+  "teacherId": "이영직",
+  "uploadDate": "2025-08-28T10:22:34.816Z",
+  "filename": "Test_1.mp4",
+  "fileSize": 121980576,
+  "videoDuration": "00:48:04.04"
+}

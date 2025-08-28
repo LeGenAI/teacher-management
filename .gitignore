@@ -14,9 +14,6 @@ out/
 .env.test.local
 .env.production.local
 
-# Uploaded files
-public/uploads/
-
 # IDE
 .vscode/
 .idea/
@@ -81,3 +78,6 @@ tmp/
 # *.avi
 # *.mov
 # *.mkv
+
+# Uploaded files
+public/uploads/
