@@ -67,6 +67,11 @@ export default function AdminDashboard() {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // 디버깅을 위한 useEffect
   useEffect(() => {
@@ -75,13 +80,18 @@ export default function AdminDashboard() {
     console.log('📋 프로필:', profile)
     console.log('📋 프로필 역할:', profile?.role)
     console.log('⏳ Auth 로딩:', authLoading)
-    console.log('🔄 현재 경로:', window.location.pathname)
+    // window 객체 사용 시 클라이언트에서만 실행되도록 수정
+    if (typeof window !== 'undefined') {
+      console.log('🔄 현재 경로:', window.location.pathname)
+    }
   }, [user, profile, authLoading])
 
   const handleSignOut = async () => {
     await signOut();
-    // 로그아웃 후 auth 페이지로 리다이렉트
-    window.location.href = '/auth';
+    // 로그아웃 후 auth 페이지로 리다이렉트 (클라이언트에서만 실행)
+    if (typeof window !== 'undefined') {
+      window.location.href = '/auth';
+    }
   };
 
   // 교사 목록 로드
@@ -129,10 +139,29 @@ export default function AdminDashboard() {
     loadTeachers();
   }, []);
 
+  // 하이드레이션이 완료되지 않았거나 인증 로딩 중이면 로딩 표시
+  if (!isClient || authLoading) {
+    return (
+      <Box
+        component="div"
+        sx={{
+          minHeight: '100vh',
+          backgroundColor: '#FFFFF0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <CircularProgress size={40} />
+      </Box>
+    );
+  }
+
   return (
     <>
       <UserHeader />
       <Box
+        component="main"
         sx={{
           minHeight: '100vh',
           backgroundColor: '#FFFFF0',

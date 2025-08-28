@@ -14,15 +14,15 @@ export default function MockLogin() {
     const mockUser = {
       id: '7221ee18-05d5-4e9b-83c9-bd1382b07505',
       email: email,
-      role: email.includes('admin') ? 'principal' : 'teacher',
-      full_name: email.includes('admin') ? '김원장님' : '김선생님'
+      role: email.includes('admin') ? 'admin' : 'teacher',
+      full_name: email.includes('admin') ? '관리자' : '김선생님'
     }
     
     localStorage.setItem('mockUser', JSON.stringify(mockUser))
     
     // 페이지 이동
-    if (mockUser.role === 'principal') {
-      router.push('/principal-dashboard')
+    if (mockUser.role === 'admin') {
+      router.push('/admin-dashboard')
     } else {
       router.push('/')
     }
@@ -76,7 +76,7 @@ export default function MockLogin() {
           <Typography variant="body2" color="text.secondary">
             📝 <strong>테스트 계정:</strong><br/>
             • teacher@test.com → 선생님 페이지<br/>
-            • admin@test.com → 원장님 페이지
+            • admin@test.com → 관리자 페이지
           </Typography>
         </Box>
       </Box>

@@ -28,6 +28,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
   const [profileLoading, setProfileLoading] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [isHydrated, setIsHydrated] = useState(false)
   const supabase = createSupabaseBrowserClient()
 
   // 권한 계산
@@ -50,6 +51,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true)
+    // 하이드레이션 완료를 표시
+    setIsHydrated(true)
   }, [])
 
   useEffect(() => {
@@ -58,13 +61,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // 초기 세션 확인
     const getInitialSession = async () => {
       try {
-        // 2초 타임아웃으로 빠르게 처리
-        const sessionPromise = supabase.auth.getSession()
-        const timeoutPromise = new Promise((_, reject) => 
-          setTimeout(() => reject(new Error('세션 확인 타임아웃')), 2000)
-        )
+        console.log('🔍 초기 세션 확인 시작...')
         
-        const { data: { session }, error } = await Promise.race([sessionPromise, timeoutPromise]) as any
+        // 3초 타임아웃으로 여유있게 처리 (admin 로그인 안정성 향상)
+        let session = null
+        let error = null
+        
+        try {
+          console.log('⏰ getSession 호출 중... (3초 타임아웃)')
+          
+          const sessionPromise = supabase.auth.getSession()
+          const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('timeout')), 3000)
+          )
+          
+          const result = await Promise.race([sessionPromise, timeoutPromise])
+          session = (result as any).data.session
+          error = (result as any).error
+          console.log('✅ getSession 호출 완료')
+        } catch (sessionError) {
+          console.log('⚠️ getSession 3초 내 완료되지 않음, 계속 진행')
+          session = null
+          error = null
+        }
+        
+        console.log('🔍 세션 확인 결과:', { session: !!session, error: !!error })
+        console.log('🔍 세션 사용자:', session?.user?.email)
         
         if (error) {
           console.error('❌ Supabase 세션 오류:', error)
@@ -75,20 +97,31 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setUser(session?.user ?? null)
         
         if (session?.user) {
+          console.log('✅ 세션에서 사용자 발견, 프로필 조회 시작')
           await fetchProfile(session.user.id)
+        } else {
+          console.log('⚠️ 세션에 사용자 없음')
         }
         
         setLoading(false)
       } catch (error) {
-        // 타임아웃 오류는 조용히 처리 (개발 중이므로 예상된 오류)
-        if (error instanceof Error && error.message.includes('타임아웃')) {
-          console.log('⚠️  Supabase 연결 실패 - 로그인 페이지로 표시')
-        } else {
-          console.error('💥 예상치 못한 오류:', error)
-        }
+        // 조용히 처리 - 에러 로그 제거
+        console.log('⚠️ 초기 세션 확인 실패, 로그인 페이지로 이동')
         setUser(null)
         setProfile(null)
         setLoading(false)
+      } finally {
+        // 강제로 로딩 상태 해제
+        console.log('🔚 getInitialSession 완료, 로딩 상태 해제')
+        setLoading(false)
+        setProfileLoading(false)
+        
+        // 추가 보장을 위해 200ms 후에 한 번 더 해제
+        setTimeout(() => {
+          console.log('🔚 최종 로딩 상태 해제')
+          setLoading(false)
+          setProfileLoading(false)
+        }, 200)
       }
     }
 
@@ -157,92 +190,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           console.log('🎯 사용자 역할 확인:', profileData.role)
           setProfile(profileData)
         } else {
-          console.log('⚠️ 프로필 데이터 없음, 이메일 기반으로 기본값 설정')
-          // admin 계정인지 확인
-          const userEmail = user?.email || ''
-          let defaultRole: UserRole = 'teacher'
-          let defaultName = '선생님'
+          console.log('⚠️ 프로필 데이터 없음 - Supabase profiles 테이블에 해당 사용자 없음')
+          console.log('📧 조회한 사용자 이메일:', user?.email)
+          console.log('🆔 조회한 사용자 ID:', userId)
           
-          if (userEmail === 'admin@test.com') {
-            defaultRole = 'admin'
-            defaultName = '관리자'
-            console.log('👨‍💼 Admin 계정 감지, admin 역할로 설정')
-          }
-          
-          const defaultProfile = {
-            id: userId,
-            email: userEmail,
-            full_name: defaultName,
-            role: defaultRole,
-            school_name: null,
-            phone_number: null,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          }
-          console.log('✅ 기본 프로필 설정:', defaultProfile)
-          setProfile(defaultProfile)
-          
-          // admin 계정인 경우 즉시 프로필 설정 완료 알림
-          if (userEmail === 'admin@test.com') {
-            console.log('🚀 Admin 프로필 설정 완료, 리다이렉트 준비됨')
-          }
+          // 프로필이 없으면 null로 설정하여 로그인 실패로 처리
+          setProfile(null)
+          console.log('❌ 프로필이 없으므로 로그인 거부')
         }
       } else {
         console.log('❌ REST API 오류:', response.status, response.statusText)
         
-        // 오류 시에도 이메일 기반으로 기본값 설정
-        console.log('⚠️ 오류로 인해 이메일 기반 기본값 설정')
-        const userEmail = user?.email || ''
-        let defaultRole: UserRole = 'teacher'
-        let defaultName = '선생님'
-        
-        if (userEmail === 'admin@test.com') {
-          defaultRole = 'admin'
-          defaultName = '관리자'
-          console.log('👨‍💼 Admin 계정 감지, admin 역할로 설정')
-        }
-        
-        const defaultProfile = {
-          id: userId,
-          email: userEmail,
-          full_name: defaultName,
-          role: defaultRole,
-          school_name: null,
-          phone_number: null,
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
-        }
-        console.log('✅ 기본 프로필 설정:', defaultProfile)
-        setProfile(defaultProfile)
+        // 오류 시에는 프로필을 null로 설정
+        console.log('❌ REST API 오류로 인해 프로필 조회 실패')
+        console.log('📧 사용자 이메일:', user?.email)
+        setProfile(null)
       }
       
     } catch (error) {
       console.error('💥 프로필 조회 예외:', error)
       
-      // 예외 발생 시에도 이메일 기반으로 기본값 설정
-      console.log('⚠️ 예외로 인해 이메일 기반 기본값 설정')
-      const userEmail = user?.email || ''
-      let defaultRole: UserRole = 'teacher'
-      let defaultName = '선생님'
-      
-      if (userEmail === 'admin@test.com') {
-        defaultRole = 'admin'
-        defaultName = '관리자'
-        console.log('👨‍💼 Admin 계정 감지, admin 역할로 설정')
-      }
-      
-      const defaultProfile = {
-        id: userId,
-        email: userEmail,
-        full_name: defaultName,
-        role: defaultRole,
-        school_name: null,
-        phone_number: null,
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
-      }
-      console.log('✅ 기본 프로필 설정:', defaultProfile)
-      setProfile(defaultProfile)
+      // 예외 발생 시에는 프로필을 null로 설정
+      console.log('💥 예외로 인해 프로필 조회 실패')
+      console.log('📧 사용자 이메일:', user?.email)
+      setProfile(null)
     } finally {
       console.log('🔚 프로필 조회 종료')
       setProfileLoading(false)
@@ -261,22 +232,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('✅ AuthContext: 로그인 성공, 사용자 ID:', data.user.id)
       console.log('📧 로그인한 사용자 이메일:', data.user.email)
       
-      // admin 계정인 경우 즉시 프로필 설정
-      if (data.user.email === 'admin@test.com') {
-        console.log('👨‍💼 Admin 계정 로그인 감지, 즉시 프로필 설정')
-        const adminProfile = {
-          id: data.user.id,
-          email: data.user.email,
-          full_name: '관리자',
-          role: 'admin' as const,
-          school_name: null,
-          phone_number: null,
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
-        }
-        console.log('✅ Admin 프로필 즉시 설정:', adminProfile)
-        setProfile(adminProfile)
-      }
+      // 로그인 성공 후 항상 프로필 조회 (하드코딩 제거)
+      console.log('🔍 로그인 성공, 프로필 조회 시작...')
+      // fetchProfile 함수가 실제 Supabase 데이터를 조회하므로 이를 사용
     }
     
     if (error) {
@@ -311,7 +269,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const value = {
     user,
     profile,
-    loading: loading || !mounted,
+    loading: loading || !mounted || !isHydrated,
     profileLoading,
     signIn,
     signUp,

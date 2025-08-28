@@ -51,6 +51,13 @@ export default function AuthPage() {
 
   // 이미 로그인된 경우 역할에 따라 리다이렉트 (auth 페이지에서만)
   useEffect(() => {
+    if (!mounted) return
+    
+    // 현재 경로가 /auth가 아니면 리다이렉트하지 않음
+    if (typeof window !== 'undefined' && window.location.pathname !== '/auth') {
+      return
+    }
+    
     console.log('🔐 Auth 페이지 - Auth 상태 확인:', { 
       user: !!user, 
       userEmail: user?.email,
@@ -58,16 +65,8 @@ export default function AuthPage() {
       loading, 
       profileLoading, 
       redirecting,
-      currentPath: window.location.pathname
+      currentPath: typeof window !== 'undefined' ? window.location.pathname : 'unknown'
     })
-    
-    // admin 계정인지 즉시 확인
-    if (!loading && user && user.email === 'admin@test.com' && !redirecting) {
-      console.log('👨‍💼 Admin 계정 감지, 즉시 admin-dashboard로 리다이렉트')
-      setRedirecting(true)
-      window.location.href = '/admin-dashboard'
-      return
-    }
     
     // 사용자가 로그인되어 있고 로딩이 완료된 경우, 그리고 아직 리다이렉트하지 않은 경우
     if (!loading && user && profile && !redirecting) {
@@ -76,22 +75,20 @@ export default function AuthPage() {
       console.log('📧 사용자 이메일:', user.email)
       console.log('🔄 Auth 페이지에서 리다이렉트 중...')
       
-      // 현재 경로가 /auth인 경우에만 리다이렉트
-      if (window.location.pathname === '/auth') {
-        setRedirecting(true) // 리다이렉트 시작
-        
-        if (profile.role === 'principal') {
-          console.log('👨‍🏫 원장으로 리다이렉트: /principal-dashboard')
-          router.replace('/principal-dashboard')
-        } else {
-          console.log('👨‍🏫 교사로 리다이렉트: /')
-          router.replace('/')
-        }
+      setRedirecting(true) // 리다이렉트 시작
+      
+      if (profile.role === 'admin') {
+        console.log('👨‍💼 관리자로 리다이렉트: /admin-dashboard')
+        router.replace('/admin-dashboard')
+      } else if (profile.role === 'principal') {
+        console.log('👨‍🏫 원장으로 리다이렉트: /principal-dashboard')
+        router.replace('/principal-dashboard')
       } else {
-        console.log('⚠️ 현재 /auth 페이지가 아니므로 리다이렉트 건너뜀')
+        console.log('👨‍🏫 교사로 리다이렉트: /')
+        router.replace('/')
       }
     }
-  }, [user, profile, loading, profileLoading, router, redirecting])
+  }, [mounted, user, profile, loading, profileLoading, router, redirecting])
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue)
@@ -110,20 +107,22 @@ export default function AuthPage() {
     
     setRedirecting(true) // 리다이렉트 시작
     
-    // admin 계정인지 즉시 확인하고 리다이렉트
-    if (user?.email === 'admin@test.com') {
-      console.log('👨‍💼 Admin 계정 감지, 즉시 admin-dashboard로 리다이렉트')
-      window.location.href = '/admin-dashboard'
+    // 현재 경로가 /auth가 아니면 리다이렉트하지 않음
+    if (typeof window !== 'undefined' && window.location.pathname !== '/auth') {
+      console.log('⚠️ Auth 페이지가 아니므로 리다이렉트 취소')
       return
     }
     
-    // 다른 계정들은 프로필 로딩을 기다린 후 리다이렉트
+    // 프로필 기반으로만 리다이렉트
     setTimeout(() => {
       console.log('⏰ 리다이렉트 실행 - 최종 상태 확인')
       console.log('📧 사용자 이메일:', user?.email)
       console.log('📋 프로필 역할:', profile?.role)
       
-      if (profile?.role === 'principal') {
+      if (profile?.role === 'admin') {
+        console.log('👨‍💼 관리자로 리다이렉트: /admin-dashboard')
+        router.replace('/admin-dashboard')
+      } else if (profile?.role === 'principal') {
         console.log('👨‍🏫 원장으로 리다이렉트: /principal-dashboard')
         router.replace('/principal-dashboard')
       } else {

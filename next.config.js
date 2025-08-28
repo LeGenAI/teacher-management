@@ -7,6 +7,16 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['sharp', 'onnxruntime-node']
   },
+  // Emotion 및 Material-UI 최적화
+  compiler: {
+    emotion: true,
+  },
+  // CSS-in-JS 관련 최적화
+  modularizeImports: {
+    '@mui/icons-material': {
+      transform: '@mui/icons-material/{{member}}',
+    },
+  },
   // API 라우트 설정
   api: {
     bodyParser: {

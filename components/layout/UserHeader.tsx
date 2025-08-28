@@ -11,7 +11,7 @@ import {
   MenuItem,
   IconButton
 } from '@mui/material'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../../contexts/AuthContext'
 import PersonIcon from '@mui/icons-material/Person'
@@ -20,9 +20,14 @@ import SchoolIcon from '@mui/icons-material/School'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 export default function UserHeader() {
-  const { user, profile, signOut, isTeacher, isPrincipal, isAdmin } = useAuth()
+  const { user, profile, signOut, isTeacher, isPrincipal, isAdmin, loading } = useAuth()
   const router = useRouter()
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
@@ -35,11 +40,14 @@ export default function UserHeader() {
   const handleSignOut = async () => {
     await signOut()
     handleMenuClose()
-    // 로그아웃 후 auth 페이지로 리다이렉트
-    window.location.href = '/auth'
+    // 로그아웃 후 auth 페이지로 리다이렉트 (클라이언트에서만 실행)
+    if (typeof window !== 'undefined') {
+      window.location.href = '/auth'
+    }
   }
 
-  if (!user || !profile) {
+  // 하이드레이션 중이거나 로딩 중이거나 사용자 정보가 없으면 null 반환
+  if (!isClient || loading || !user || !profile) {
     return null
   }
 

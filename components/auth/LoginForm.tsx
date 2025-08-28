@@ -36,10 +36,11 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
         setError(error.message)
       } else {
         console.log('✅ 로그인 성공!')
-        // 로그인 성공 후 1초 후에 리다이렉트
+        
+        // 하드코딩된 이메일 체크 제거 - 모든 계정 동일하게 처리
         setTimeout(() => {
           onSuccess?.()
-        }, 1000) // 1초 후 리다이렉트
+        }, 1000)
       }
     } catch (err) {
       console.log('💥 로그인 예외:', err)
@@ -95,7 +96,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
           🧪 테스트 계정
         </Typography>
         <Typography variant="body2">
-          <strong>원장님:</strong> admin@test.com / 123456<br/>
+          <strong>관리자:</strong> admin@test.com / 123456<br/>
           <strong>선생님:</strong> teacher@test.com / 123456
         </Typography>
       </Box>
