@@ -41,9 +41,9 @@ export default function AdminTestPage() {
 
   useEffect(() => {
     if (profile?.role === 'admin') {
-      // 어드민 로그인 성공 시 메인 페이지로 이동
+      // 어드민 로그인 성공 시 어드민 대시보드로 이동
       setTimeout(() => {
-        router.push('/');
+        router.push('/admin-dashboard');
       }, 2000);
     }
   }, [profile, router]);

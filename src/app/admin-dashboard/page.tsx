@@ -245,6 +245,7 @@ export default function AdminDashboard() {
 
           {/* 관리 메뉴 */}
           <Grid container spacing={3}>
+{/* 사용자 관리 영역 숨김
             <Grid item xs={12} md={6}>
               <Card>
                 <CardContent>
@@ -275,7 +276,9 @@ export default function AdminDashboard() {
                 </CardContent>
               </Card>
             </Grid>
+            */}
 
+{/* 시스템 분석 영역 숨김
             <Grid item xs={12} md={6}>
               <Card>
                 <CardContent>
@@ -327,9 +330,10 @@ export default function AdminDashboard() {
                 </CardContent>
               </Card>
             </Grid>
+            */}
           </Grid>
 
-          {/* 현재 권한 정보 */}
+{/* 현재 권한 정보 영역 숨김
           <Card sx={{ mt: 4 }}>
             <CardContent>
               <Typography variant="h6" fontWeight="bold" gutterBottom>
@@ -344,6 +348,7 @@ export default function AdminDashboard() {
               </Box>
             </CardContent>
           </Card>
+          */}
 
           {/* 등록된 교사 목록 */}
           <Card sx={{ mt: 4 }}>
@@ -386,7 +391,7 @@ export default function AdminDashboard() {
                         <TableCell><strong>학교</strong></TableCell>
                         <TableCell><strong>전화번호</strong></TableCell>
                         <TableCell><strong>가입일</strong></TableCell>
-                        <TableCell><strong>상태</strong></TableCell>
+                        <TableCell><strong>보고서</strong></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -433,11 +438,15 @@ export default function AdminDashboard() {
                             </Box>
                           </TableCell>
                           <TableCell>
-                            <Chip
-                              label="활성"
-                              color="success"
+                            <Button
+                              variant="contained"
                               size="small"
-                            />
+                              color="primary"
+                              onClick={() => router.push(`/teachers/${encodeURIComponent(teacher.full_name || teacher.email)}`)}
+                              startIcon={<AssessmentIcon />}
+                            >
+                              보고서 보기
+                            </Button>
                           </TableCell>
                         </TableRow>
                       ))}

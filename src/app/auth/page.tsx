@@ -80,9 +80,6 @@ export default function AuthPage() {
       if (profile.role === 'admin') {
         console.log('👨‍💼 관리자로 리다이렉트: /admin-dashboard')
         router.replace('/admin-dashboard')
-      } else if (profile.role === 'principal') {
-        console.log('👨‍🏫 원장으로 리다이렉트: /principal-dashboard')
-        router.replace('/principal-dashboard')
       } else {
         console.log('👨‍🏫 교사로 리다이렉트: /')
         router.replace('/')
@@ -122,9 +119,6 @@ export default function AuthPage() {
       if (profile?.role === 'admin') {
         console.log('👨‍💼 관리자로 리다이렉트: /admin-dashboard')
         router.replace('/admin-dashboard')
-      } else if (profile?.role === 'principal') {
-        console.log('👨‍🏫 원장으로 리다이렉트: /principal-dashboard')
-        router.replace('/principal-dashboard')
       } else {
         console.log('👨‍🏫 교사로 리다이렉트: /')
         router.replace('/')

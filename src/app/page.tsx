@@ -187,6 +187,14 @@ export default function TeacherDashboard() {
     }
   }, [profile?.full_name]);
 
+  // Admin 사용자 리다이렉트 처리
+  useEffect(() => {
+    if (profile?.role === 'admin') {
+      console.log('🔄 Admin 사용자 감지, admin-dashboard로 리다이렉트');
+      router.replace('/admin-dashboard');
+    }
+  }, [profile?.role, router]);
+
   if (!mounted) {
     return null;
   }
@@ -392,7 +400,7 @@ export default function TeacherDashboard() {
   const analyzingLessons = lessons.filter(lesson => lesson.status === 'analyzing').length;
 
   return (
-          <ProtectedRoute allowedRoles={['teacher', 'principal', 'admin']}>
+          <ProtectedRoute allowedRoles={['teacher', 'admin']}>
       <UserHeader />
       <GradientBackground>
         <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
